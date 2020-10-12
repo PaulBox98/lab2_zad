@@ -21,16 +21,11 @@ const user = {
     ]
 }
 
-function average(arguments){
-    let average = 0;
-    let weight = 0;
+function zad4(arguments){
 
-    for(i=0; i<arguments.allGrades.length; i++){
-        average += _.sum(arguments.allGrades[i].grades);
-        weight += arguments.allGrades[i].weight;
-    }
+    let object_name = "";
 
-    average /= weight;
-    return arguments.name + " " + arguments.surname + " Average: " + average ;
+    object_name = _.find(arguments.allGrades, {weight: 1}).subjectName;
+    return object_name;
 }
-console.log(average(user));
+console.log(zad4(user));
